@@ -5,7 +5,7 @@ class MainUrl:
 class EndPoint:
     create_user = "/api/auth/register"
     verification_user = "/api/auth/login"
-    regestration_user = "/api/auth/register"
+    registration_user = "/api/auth/register"
     change_user = "/api/auth/user"
     delete_user = "/api/auth/user"
     create_orders = "/api/orders"
