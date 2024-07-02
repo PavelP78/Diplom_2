@@ -56,5 +56,5 @@ def user():
     access_token = data.get('accessToken')
     headers = {"Authorization": f"Bearer{access_token}"}
     yield response, access_token, headers
-    response = requests.delete(f"{MainUrl.url}{EndPoint.delete_user}", headers=headers)
+    response = requests.delete(f"{MainUrl.URL}{EndPoint.delete_user}", headers=headers)
     assert response.status_code == 202, "Пользователь не удален"

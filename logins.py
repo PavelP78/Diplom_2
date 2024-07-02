@@ -1,7 +1,7 @@
 class UserLogin:
 
     login_create = {
-        "email": "qуууiууZsz@yandex.ru",
+        "email": "e45wrtzsa@yandex.com",
         "password": "12211311",
         "name": "wqqLogin"
     }
@@ -13,13 +13,13 @@ class UserLogin:
     }
 
     user_without_password = {
-        "email": "qуууiууZsz@yandex.ru",
+        "email": "e45wrtzsa@yandex.com",
         "password": "",
         "name": "RLogin"
     }
 
     user_without_name = {
-        "email": "qуууiууZsz@yandex.ru",
+        "email": "e45wrtzsa@yandex.com",
         "password": "111111",
         "name": ""
     }
@@ -28,7 +28,7 @@ class UserLogin:
 class VerificationUserLogin:
 
     login_user = {
-        "email": "qуууiууZsz@yandex.ru",
+        "email": "e45wrtzsa@yandex.com",
         "password": "12211311"
     }
 
@@ -38,7 +38,7 @@ class VerificationUserLogin:
     }
 
     incorrect_password = {
-        "email": "qqуууiууZsz@yandex.ru",
+        "email": "e45wrtzsa@yandex.com",
         "password": "177777"
     }
 
@@ -51,7 +51,7 @@ class VerificationUserLogin:
 class ChangeUserLogin:
 
     user_change_email = {
-        "email": "32qwzz00zww@yandex.ru",
+        "email": "3eeeee0zww@yandex.ru",
     }
 
     user_change_password = {

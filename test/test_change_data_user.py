@@ -11,7 +11,7 @@ from logins import ChangeUserLogin
                                                ChangeUserLogin.user_change_name])
 def test_change_verification_data_user(user, change_user_field):
     response, access_token, headers = user
-    response = requests.patch(f"{MainUrl.url}{EndPoint.change_user}", headers=headers, data=change_user_field)
+    response = requests.patch(f"{MainUrl.URL}{EndPoint.change_user}", headers=headers, data=change_user_field)
     assert response.status_code == 200, "пользователь не изменил данные"
 
 
@@ -20,5 +20,5 @@ def test_change_verification_data_user(user, change_user_field):
                                                ChangeUserLogin.user_change_password,
                                                ChangeUserLogin.user_change_name])
 def test_change_not_verification_data_user(user, change_user_field):
-    response = requests.patch(f"{MainUrl.url}{EndPoint.change_user}", headers=None, data=change_user_field)
+    response = requests.patch(f"{MainUrl.URL}{EndPoint.change_user}", headers=None, data=change_user_field)
     assert response.status_code == 401, "пользователь  изменил данные"

@@ -16,5 +16,5 @@ def test_verification_user(user):
 @pytest.mark.parametrize("verification_field", [VerificationUserLogin.incorrect_email,
                                                 VerificationUserLogin.incorrect_password])
 def test_verification_with_error_field(verification_field):
-    response = requests.post(f"{MainUrl.url}{EndPoint.verification_user}", data=verification_field)
+    response = requests.post(f"{MainUrl.URL}{EndPoint.verification_user}", data=verification_field)
     assert response.status_code == 401, "пользователь  авторизирован"

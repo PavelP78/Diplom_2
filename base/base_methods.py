@@ -20,7 +20,7 @@ class StellarBurgersAPI:
 
     @staticmethod
     def create_new_user(sign_up_data):
-        new_user_response = requests.post(f"{MainUrl.url}{EndPoint.registration_user}", data=sign_up_data)
+        new_user_response = requests.post(f"{MainUrl.URL}{EndPoint.registration_user}", data=sign_up_data)
         return new_user_response
 
     def get_login(self):
@@ -31,7 +31,7 @@ class StellarBurgersAPI:
 
     @staticmethod
     def verification_user(user_data):
-        response = requests.post(f"{MainUrl.url}{EndPoint.verification_user}",
+        response = requests.post(f"{MainUrl.URL}{EndPoint.verification_user}",
                                  data=user_data)
         return response
 
@@ -43,7 +43,7 @@ class StellarBurgersAPI:
     @staticmethod
     def delete_user(access_token):
         headers = {"Authorization": f"Bearer{access_token}"}
-        response = requests.delete(f"{MainUrl.url}{EndPoint.delete_user}", headers=headers)
+        response = requests.delete(f"{MainUrl.URL}{EndPoint.delete_user}", headers=headers)
         return response
 
 
@@ -51,12 +51,12 @@ class HttpMethods:
 
     @staticmethod
     def create_new_user():
-        response = requests.post(f"{MainUrl.url}{EndPoint.create_user}", data=UserLogin.login_create)
+        response = requests.post(f"{MainUrl.URL}{EndPoint.create_user}", data=UserLogin.login_create)
         return response
 
     @staticmethod
     def verification_user():
-        response = requests.post(f"{MainUrl.url}{EndPoint.verification_user}", data=VerificationUserLogin.login_user)
+        response = requests.post(f"{MainUrl.URL}{EndPoint.verification_user}", data=VerificationUserLogin.login_user)
         return response
 
     @staticmethod
@@ -66,7 +66,7 @@ class HttpMethods:
             "password": temp_data_password.MY_PASSWORD,
             "name": temp_data_name.MY_NAME
         }
-        special_user_response = requests.post(f"{MainUrl.url}{EndPoint.registration_user}", data=special_user_data)
+        special_user_response = requests.post(f"{MainUrl.URL}{EndPoint.registration_user}", data=special_user_data)
         return special_user_response
 
     @staticmethod
@@ -75,12 +75,12 @@ class HttpMethods:
             "email": temp_data_login.MY_LOGIN,
             "password": temp_data_password.MY_PASSWORD,
         }
-        response = requests.post(f"{MainUrl.url}{EndPoint.verification_user}",
+        response = requests.post(f"{MainUrl.URL}{EndPoint.verification_user}",
                                  data=data)
         return response
 
     @staticmethod
     def delete_user():
         headers = {"Authorization": f"Bearer{temp_data.access_token}"}
-        response = requests.delete(f"{MainUrl.url}{EndPoint.delete_user}", headers=headers)
+        response = requests.delete(f"{MainUrl.URL}{EndPoint.delete_user}", headers=headers)
         return response

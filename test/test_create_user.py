@@ -34,5 +34,5 @@ def test_create_two_identical_users(create_faker_user):
 @pytest.mark.parametrize("user_field", [UserLogin.user_without_email, UserLogin.user_without_password,
                                         UserLogin.user_without_name])
 def test_create_courier_without_field(user_field):
-    response = requests.post(f"{MainUrl.url}{EndPoint.create_user}", data=user_field)
+    response = requests.post(f"{MainUrl.URL}{EndPoint.create_user}", data=user_field)
     assert response.status_code == 403, "Пользователь создан"

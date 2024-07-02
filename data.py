@@ -1,5 +1,5 @@
 class MainUrl:
-    url = 'https://stellarburgers.nomoreparties.site'
+    URL = 'https://stellarburgers.nomoreparties.site'
 
 
 class EndPoint:
